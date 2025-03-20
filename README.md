@@ -29,14 +29,10 @@ cd linksphere
 Install dependencies:
 
 npm install
-Set up environment variables (.env file):
-
-MONGO_URI=your_mongodb_connection
-GOOGLE_SAFE_BROWSING_API_KEY=your_api_key
 Start the server:
-
 npm start
 Open in browser: http://localhost:3000
+
 📌 Future Enhancements
 Custom short URLs for branding
 User dashboard for managing links
