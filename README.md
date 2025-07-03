@@ -1,59 +1,76 @@
 # LinkSphere
-LinkSphere is an advanced URL shortener that focuses on efficiency, security, and privacy. Unlike traditional shorteners, it prevents duplicate links, blocks malicious URLs, and provides analytics only to the link owner.
 
-🔥 Features:
+LinkSphere is a full-stack URL shortener that focuses on privacy, security, and efficiency. It enables users to shorten URLs while preventing duplication, blocking malicious URLs, and keeping analytics private to the link owner. The platform is ideal for both individual users and businesses looking to manage links more securely.
 
-✅ Unique Short URLs – Same long URL gets the same short URL.
+Key Features
+Consistent Short URLs: Generates the same short URL for the same long URL, avoiding duplicates.
 
-✅ Malicious URL Protection – Uses Google Safe Browsing API to block harmful links.
+Malicious URL Detection: Uses Google Safe Browsing API to block unsafe or phishing URLs before shortening.
 
-✅ Private Analytics – Only the creator can see click counts.
+Private Analytics: Only the creator of a short URL can view the number of clicks and insights.
 
-✅ Auto-Expiry – Unused links delete automatically after 7 days to save space.
+Auto-Expiry: Automatically deletes unused links after 7 days using MongoDB’s TTL (Time-To-Live) indexing.
 
-✅ User Authentication (Future Scope) – Personalized link tracking & management.
+User Authentication : Will allow users to manage and organize their shortened links through personal accounts.
 
-🛠️ Tech Stack:
+Technology Stack
+Frontend
+EJS (Embedded JavaScript Templates) for rendering dynamic pages
 
-Backend: Node.js, Express.js
+Bootstrap for responsive and clean UI
 
-Database: MongoDB (with indexing & TTL for auto-deletion)
+Backend
+Node.js and Express.js for handling server logic and routing
 
-Frontend: EJS, Bootstrap
+Database
+MongoDB with Mongoose for schema design, indexing, and TTL
 
-Security: Google Safe Browsing API for link validation
+Google Safe Browsing API for URL safety validation
 
-📌 How It Works:
+How It Works
+The user enters a long URL on the homepage.
 
-1️⃣ User enters a long URL → System checks for existing short link.
+The system checks if the URL already exists and is safe.
 
-2️⃣ If malicious, the URL is rejected.
+If it’s safe and not already shortened, a new short URL is generated and stored.
 
-3️⃣ If safe, a unique short link is generated & stored in MongoDB.
+When the short URL is accessed, it redirects to the original URL and updates the click count.
 
-4️⃣ When someone visits the short link, the system redirects them & logs the click count.
+If the URL remains unused for 7 days, MongoDB automatically deletes it.
 
-5️⃣ The link auto-expires after 7 days if not used.
+Getting Started
+Prerequisites
+Node.js 
 
-⚡ Installation & Setup
+MongoDB 
+
+npm or yarn
+
+Installation
 Clone the repository:
-git clone : git clone https://github.com/desaishro/linksphere.git
 
+git clone https://github.com/desaishro/linksphere.git
 cd linksphere
+Install backend dependencies:
 
-Install dependencies:
 
 npm install
+Set up environment variables:
+Create a .env file and add:
 
-Start the server:
+Run the application:
+
 
 npm start
-Open in browser: http://localhost:3000
+Open in your browser:
 
-📌 Future Enhancements
 
+http://localhost:5000
+Future Enhancements
 Custom short URLs for branding
 
-User dashboard for managing links
+User dashboard with login/signup for link history
 
-Advanced analytics & QR code generation
+QR code generation for each shortened link
+
+Advanced analytics 
