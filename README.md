@@ -2,28 +2,21 @@
 
 LinkSphere is a full-stack URL shortening platform focused on efficiency, security, and privacy. Unlike traditional shorteners, it prevents duplicate links, blocks malicious URLs, and keeps link analytics private to the creator. It also includes an auto-expiry system to clean up unused links and is designed with future support for user accounts and personalized dashboards.
 
-🔗 Live Demo
-Coming Soon
+---
 
-📑 Table of Contents
-Key Features
 
-Technology Stack
+## 📑 Table of Contents
+- [Key Features](#key-features)
+- [Technology Stack](#technology-stack)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running the Application](#running-the-application)
+  - [Available Scripts](#available-scripts)
+- [Contributing](#contributing)
 
-How It Works
-
-Getting Started
-
-Prerequisites
-
-Installation
-
-Running the Application
-
-Future Enhancements
-
-Contributors
-
+---
 🚀 Key Features
 Duplicate-Free Short URLs: The same long URL always generates the same short link.
 
@@ -35,7 +28,10 @@ Auto-Expiry of Links: Unused links are automatically deleted after 7 days using 
 
 User Authentication : Secure login system to allow users to manage their own set of links.
 
+---
+
 🛠️ Technology Stack
+
 Frontend
 EJS: Templating engine for server-rendered views
 
@@ -54,6 +50,8 @@ Mongoose: Object modeling tool for MongoDB
 Security
 Google Safe Browsing API: Used to validate URLs before shortening them
 
+---
+
 📌 How It Works
 User submits a long URL on the homepage.
 
@@ -66,6 +64,8 @@ If safe, a unique short ID is generated and stored in the database.
 Visiting the short URL redirects the user to the original link and updates click count.
 
 If unused for 7 days, the URL is automatically removed from the database.
+
+---
 
 🏁 Getting Started
 Follow these steps to set up and run LinkSphere locally.
@@ -86,17 +86,15 @@ Clone the Repository:
 git clone https://github.com/desaishro/linksphere.git
 cd linksphere
 Install Dependencies:
-
-bash
-Copy
-Edit
 npm install
 
 Run the Application:
-
 npm start
+
 Open in Browser:
 Visit http://localhost:5000 to use the application.
+
+---
 
 🌱 Future Enhancements
 Custom Short URLs for branding and readability
