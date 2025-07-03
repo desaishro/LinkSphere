@@ -1,7 +1,9 @@
-LinkSphere – Secure and Smart URL Shortener
+**LinkSphere – Secure and Smart URL Shortener**
 
-LinkSphere is a full-stack URL shortener built with a focus on security, privacy, and usability. It allows users to generate unique short URLs, blocks malicious links, and ensures that link analytics are visible only to the creator. The system also includes an auto-expiry feature to remove unused links after a specific duration, ensuring efficient database management.
+LinkSphere is a full-stack URL shortening platform focused on efficiency, security, and privacy. Unlike traditional shorteners, it prevents duplicate links, blocks malicious URLs, and keeps link analytics private to the creator. It also includes an auto-expiry system to clean up unused links and is designed with future support for user accounts and personalized dashboards.
 
+🔗 Live Demo
+Coming Soon
 
 📑 Table of Contents
 Key Features
@@ -12,7 +14,11 @@ How It Works
 
 Getting Started
 
+Prerequisites
+
 Installation
+
+Running the Application
 
 Future Enhancements
 
@@ -21,77 +27,82 @@ Contributors
 🚀 Key Features
 Duplicate-Free Short URLs: The same long URL always generates the same short link.
 
-Malicious URL Protection: Integrates Google Safe Browsing API to prevent shortening of unsafe or phishing URLs.
+Malicious URL Protection: Integrates Google Safe Browsing API to detect and block unsafe or phishing URLs.
 
-Private Click Analytics: Click counts are visible only to the link creator .
+Private Analytics: Click counts are stored and visible only to the link creator.
 
-Auto-Expiry: Unused links are automatically deleted after 7 days using MongoDB TTL indexing.
+Auto-Expiry of Links: Unused links are automatically deleted after 7 days using MongoDB TTL indexing.
 
-User Authentication : Secure login system to allow link management by registered users.
+User Authentication : Secure login system to allow users to manage their own set of links.
 
 🛠️ Technology Stack
 Frontend
-EJS – Templating engine for rendering views
+EJS: Templating engine for server-rendered views
 
-Bootstrap – Responsive design and layout
+Bootstrap: Responsive, mobile-first UI framework
 
 Backend
-Node.js – JavaScript runtime environment
+Node.js: JavaScript runtime for the server
 
-Express.js – Server-side routing and logic
+Express.js: Minimal and fast web application framework
 
 Database
-MongoDB – NoSQL database with indexing and TTL features
+MongoDB: NoSQL database with support for TTL indexing
 
-Mongoose – ODM for MongoDB schema and model handling
+Mongoose: Object modeling tool for MongoDB
 
 Security
-Google Safe Browsing API – Detects and blocks malicious URLs during submission
+Google Safe Browsing API: Used to validate URLs before shortening them
 
 📌 How It Works
-User enters a long URL on the homepage.
+User submits a long URL on the homepage.
 
-The server checks if a shortened version already exists.
+The server checks if a short version already exists for that URL.
 
-If not, the system validates the URL using the Safe Browsing API.
+If it doesn't exist, the URL is validated using the Safe Browsing API.
 
-If valid, a unique short ID is generated and stored.
+If safe, a unique short ID is generated and stored in the database.
 
-When the short link is accessed, the system redirects to the original URL and updates the click count.
+Visiting the short URL redirects the user to the original link and updates click count.
 
-If the link is unused for 7 days, MongoDB automatically deletes it.
+If unused for 7 days, the URL is automatically removed from the database.
 
-🧭 Getting Started
+🏁 Getting Started
+Follow these steps to set up and run LinkSphere locally.
+
 Prerequisites
+Make sure you have the following installed:
+
 Node.js (v16 or higher)
 
 MongoDB (local or MongoDB Atlas)
 
-npm
+npm (or yarn)
 
-📦 Installation
-Clone the Repository
+Installation
+Clone the Repository:
 
 
 git clone https://github.com/desaishro/linksphere.git
 cd linksphere
-Install Dependencies
+Install Dependencies:
 
+bash
+Copy
+Edit
 npm install
 
-Run the Application
+Run the Application:
 
 npm start
-Visit in Browser
-
-http://localhost:5000
+Open in Browser:
+Visit http://localhost:5000 to use the application.
 
 🌱 Future Enhancements
+Custom Short URLs for branding and readability
 
-Custom short links for branded usage
+User Authentication with dashboards to manage personal links
 
-User authentication and dashboard
+Advanced Analytics with device, location, and referrer data
 
-Advanced analytics 
-
-QR code generation for each short URL
+QR Code Generation for every shortened link
