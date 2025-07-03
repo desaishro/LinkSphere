@@ -1,9 +1,9 @@
 **LinkSphere – Secure and Smart URL Shortener**
+--- 
 
 LinkSphere is a full-stack URL shortening platform focused on efficiency, security, and privacy. Unlike traditional shorteners, it prevents duplicate links, blocks malicious URLs, and keeps link analytics private to the creator. It also includes an auto-expiry system to clean up unused links and is designed with future support for user accounts and personalized dashboards.
 
 ---
-
 
 ## 📑 Table of Contents
 - [Key Features](#key-features)
@@ -17,7 +17,9 @@ LinkSphere is a full-stack URL shortening platform focused on efficiency, securi
 - [Contributing](#contributing)
 
 ---
-🚀 Key Features
+
+## Key Features
+
 Duplicate-Free Short URLs: The same long URL always generates the same short link.
 
 Malicious URL Protection: Integrates Google Safe Browsing API to detect and block unsafe or phishing URLs.
@@ -52,7 +54,7 @@ Google Safe Browsing API: Used to validate URLs before shortening them
 
 ---
 
-📌 How It Works
+## How It Works
 User submits a long URL on the homepage.
 
 The server checks if a short version already exists for that URL.
@@ -67,36 +69,28 @@ If unused for 7 days, the URL is automatically removed from the database.
 
 ---
 
-🏁 Getting Started
+## 🏁 Getting Started
 Follow these steps to set up and run LinkSphere locally.
 
-Prerequisites
-Make sure you have the following installed:
-
-Node.js (v16 or higher)
-
-MongoDB (local or MongoDB Atlas)
-
-npm (or yarn)
-
-Installation
-Clone the Repository:
 
 
-git clone https://github.com/desaishro/linksphere.git
-cd linksphere
-Install Dependencies:
-npm install
+### Prerequisites
+Ensure the following are installed:
+- **Node.js** (v16 or higher)
+- **MongoDB** (local or cloud instance, e.g., MongoDB Atlas)
+- **npm** or **yarn** (package managers)
+- A modern web browser
 
-Run the Application:
-npm start
-
-Open in Browser:
-Visit http://localhost:5000 to use the application.
+### Installation
+1. **Clone the Repository**:
+   ```bash
+  git clone https://github.com/desaishro/linksphere.git
+  cd linksphere
 
 ---
 
 🌱 Future Enhancements
+
 Custom Short URLs for branding and readability
 
 User Authentication with dashboards to manage personal links
