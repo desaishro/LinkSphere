@@ -84,9 +84,9 @@ Ensure the following are installed:
 ### Installation
 1. **Clone the Repository**:
    ```bash
-  git clone https://github.com/desaishro/linksphere.git
-  cd linksphere
-
+   https://github.com/desaishro/linksphere.git
+   cd linksphere
+  
 ---
 
 🌱 Future Enhancements
