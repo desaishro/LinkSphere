@@ -1,76 +1,97 @@
-# LinkSphere
+LinkSphere – Secure and Smart URL Shortener
 
-LinkSphere is a full-stack URL shortener that focuses on privacy, security, and efficiency. It enables users to shorten URLs while preventing duplication, blocking malicious URLs, and keeping analytics private to the link owner. The platform is ideal for both individual users and businesses looking to manage links more securely.
+LinkSphere is a full-stack URL shortener built with a focus on security, privacy, and usability. It allows users to generate unique short URLs, blocks malicious links, and ensures that link analytics are visible only to the creator. The system also includes an auto-expiry feature to remove unused links after a specific duration, ensuring efficient database management.
 
+
+📑 Table of Contents
 Key Features
-Consistent Short URLs: Generates the same short URL for the same long URL, avoiding duplicates.
-
-Malicious URL Detection: Uses Google Safe Browsing API to block unsafe or phishing URLs before shortening.
-
-Private Analytics: Only the creator of a short URL can view the number of clicks and insights.
-
-Auto-Expiry: Automatically deletes unused links after 7 days using MongoDB’s TTL (Time-To-Live) indexing.
-
-User Authentication : Will allow users to manage and organize their shortened links through personal accounts.
 
 Technology Stack
-Frontend
-EJS (Embedded JavaScript Templates) for rendering dynamic pages
-
-Bootstrap for responsive and clean UI
-
-Backend
-Node.js and Express.js for handling server logic and routing
-
-Database
-MongoDB with Mongoose for schema design, indexing, and TTL
-
-Google Safe Browsing API for URL safety validation
 
 How It Works
-The user enters a long URL on the homepage.
-
-The system checks if the URL already exists and is safe.
-
-If it’s safe and not already shortened, a new short URL is generated and stored.
-
-When the short URL is accessed, it redirects to the original URL and updates the click count.
-
-If the URL remains unused for 7 days, MongoDB automatically deletes it.
 
 Getting Started
-Prerequisites
-Node.js 
-
-MongoDB 
-
-npm or yarn
 
 Installation
-Clone the repository:
+
+Future Enhancements
+
+Contributors
+
+🚀 Key Features
+Duplicate-Free Short URLs: The same long URL always generates the same short link.
+
+Malicious URL Protection: Integrates Google Safe Browsing API to prevent shortening of unsafe or phishing URLs.
+
+Private Click Analytics: Click counts are visible only to the link creator .
+
+Auto-Expiry: Unused links are automatically deleted after 7 days using MongoDB TTL indexing.
+
+User Authentication : Secure login system to allow link management by registered users.
+
+🛠️ Technology Stack
+Frontend
+EJS – Templating engine for rendering views
+
+Bootstrap – Responsive design and layout
+
+Backend
+Node.js – JavaScript runtime environment
+
+Express.js – Server-side routing and logic
+
+Database
+MongoDB – NoSQL database with indexing and TTL features
+
+Mongoose – ODM for MongoDB schema and model handling
+
+Security
+Google Safe Browsing API – Detects and blocks malicious URLs during submission
+
+📌 How It Works
+User enters a long URL on the homepage.
+
+The server checks if a shortened version already exists.
+
+If not, the system validates the URL using the Safe Browsing API.
+
+If valid, a unique short ID is generated and stored.
+
+When the short link is accessed, the system redirects to the original URL and updates the click count.
+
+If the link is unused for 7 days, MongoDB automatically deletes it.
+
+🧭 Getting Started
+Prerequisites
+Node.js (v16 or higher)
+
+MongoDB (local or MongoDB Atlas)
+
+npm
+
+📦 Installation
+Clone the Repository
+
 
 git clone https://github.com/desaishro/linksphere.git
 cd linksphere
-Install backend dependencies:
-
+Install Dependencies
 
 npm install
-Set up environment variables:
-Create a .env file and add:
 
-Run the application:
-
+Run the Application
 
 npm start
-Open in your browser:
-
+Visit in Browser
 
 http://localhost:5000
-Future Enhancements
-Custom short URLs for branding
 
-User dashboard with login/signup for link history
+🌱 Future Enhancements
 
-QR code generation for each shortened link
+Custom short links for branded usage
+
+User authentication and dashboard
 
 Advanced analytics 
+
+QR code generation for each short URL
